@@ -1,3 +1,4 @@
+
 package niit.bank.controller;
 
 import java.io.IOException;
@@ -10,6 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import niit.bank.dao.AccountDAO;
 import niit.bank.model.Account;
+
 
 /**
  * Servlet implementation class AccountReg
