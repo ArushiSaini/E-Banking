@@ -1,14 +1,22 @@
 <%@page import="java.text.SimpleDateFormat"%>
-<%@page import="dao.CustomerDAO"%>
-<%@page import="model.Customer"%>
-<%@page import="model.Account"%>
-<%@page import="dao.AccountDAO"%>
-   <%@page import="dao.AccountDAO" %>
-    <%@page import="model.Account" %>
+<%@page import="niit.bank.dao.CustomerDAO"%>
+<%@page import="niit.bank.model.Customer"%>
+<%@page import="niit.bank.model.Account"%>
+<%@page import="niit.bank.dao.AccountDAO"%>
+   <%@page import="niit.bank.dao.AccountDAO" %>
+    <%@page import="niit.bank.model.Account" %>
     <%@page import="java.util.*" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<% 
+String cid11=(String)session.getAttribute("custid");
+if(cid11==null){
+	response.sendRedirect("Main.jsp");
+}
+else
+{
+%>
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
@@ -431,3 +439,6 @@ easingType : 'easeOutQuart'
 <script src="js/bootstrap.js"></script>
 </body>
 </html>
+<%
+}
+%>
