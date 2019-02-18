@@ -1,6 +1,6 @@
 create database Bankdatabase;
 use Bankdatabase;
-
+SET SQL_SAFE_UPDATES = 0;
 -- Table 1
 create table branch(branchid varchar(20), bname varchar(30),bcity varchar(30),ifsccode varchar(30),
 CONSTRAINT branch_branchid_pk PRIMARY KEY(branchid));
@@ -16,7 +16,9 @@ govtid varchar(50),govtidno varchar(20),citizenship varchar(20),
 CONSTRAINT customer_customerid_pk PRIMARY KEY(customerid));
 commit;
 select * from customer;
-alter table customer ADD password varchar(30);
+update customer set password='1234';
+commit;
+alter table customer ADD column password varchar(30);
 -- Table 3
 create table account(accountno varchar (15),customerid varchar(50),
 branchid varchar(20),atype varchar(20),openingbalance long,aod date,
